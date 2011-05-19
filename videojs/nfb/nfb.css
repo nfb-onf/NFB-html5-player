@@ -1,0 +1,173 @@
+/*___________________________________ Big play button
+*/
+.nfb-css .vjs-big-play-button {
+	background: url('play-big.png') no-repeat center center transparent;
+	width: 75px;
+	height: 75px;
+	margin: -35px 0 0 -35px;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.nfb-css .vjs-big-play-button:hover {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.nfb-css .vjs-big-play-button span {
+	display: none;
+}
+
+/*___________________________________ Controls
+*/
+.nfb-css.video-js-box.vjs-controls-below .vjs-controls {
+	background-color: #000;
+	background-image: url('nfb.png'), url('bg-gradient.png');
+	background-repeat: no-repeat, repeat;
+	background-position: right bottom;
+	height: 45px;
+}
+
+/* Play button */
+.nfb-css .vjs-controls > div.vjs-play-control {
+	width: 40px;
+	height: 40px;
+	top: 3px;
+	background: url('play-small.png') no-repeat center 0 transparent;
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.nfb-css.vjs-playing .vjs-controls > div.vjs-play-control {
+	background-position: center -50px;
+}
+.nfb-css .vjs-controls > div.vjs-play-control span {
+	display: none;
+}
+
+
+/* Progress control */
+.nfb-css .vjs-controls > div.vjs-progress-control {
+	left: 50px;
+	top: 3px;
+	right: 80px;
+	background: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.nfb-css .vjs-controls > div.vjs-progress-control .vjs-progress-holder {
+	margin-top: 5px;
+	border: solid 1px #000;
+	border-bottom: solid 1px #CCC;
+	background: #000;
+	height: 6px;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+.nfb-css .vjs-controls > div.vjs-progress-control .vjs-progress-holder .vjs-load-progress {
+	border: solid 1px #000;
+	border-bottom: none;
+	background: #999;
+	background-color: #999;
+	background: #999 -webkit-gradient(linear, left top, left bottom, from(#222), to(#999));
+	background: #999 -moz-linear-gradient(top,  #222,  #999);
+	height: 6px;
+	
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+.nfb-css .vjs-controls > div.vjs-progress-control .vjs-progress-holder .vjs-play-progress {
+	border: none;
+	background: #CCC;
+	height: 6px;
+	
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+/* Time control */
+.nfb-css .vjs-controls > div.vjs-time-control {
+	background: none;
+	top: 0;
+	right: 5px;
+	border: none;
+	
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+/* Volume control */
+.nfb-css .vjs-controls > div.vjs-volume-control {
+	background: none;
+	top: 21px;
+	right: 95px;
+	border: none;
+
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span {
+	opacity: 0.7;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span:hover {
+	opacity: 1;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span:nth-child(1) {
+	border-bottom-width: 2px;
+	height: 10px;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span:nth-child(2) {
+	border-bottom-width: 4px;
+	height: 8px;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span:nth-child(3) {
+	border-bottom-width: 6px;
+	height: 6px;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span:nth-child(4) {
+	border-bottom-width: 8px;
+	height: 4px;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span:nth-child(5) {
+	border-bottom-width: 10px;
+	height: 2px;
+}
+.nfb-css .vjs-controls > div.vjs-volume-control div span:nth-child(6) {
+	border-bottom-width: 12px;
+	height: 0px;
+}
+
+/* Fullscreen control */
+.nfb-css .vjs-controls > div.vjs-fullscreen-control {
+	background: url('fullscreen.png') no-repeat center center transparent;
+	top: 18px;
+	right: 65px;
+	border: none;
+	width: 25px;
+	height: 25px;
+	opacity: 0.4;
+
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+.nfb-css .vjs-controls > div.vjs-fullscreen-control:hover {
+	opacity: 1;
+}
+.nfb-css .vjs-controls > div.vjs-fullscreen-control div {
+	display: none;
+}

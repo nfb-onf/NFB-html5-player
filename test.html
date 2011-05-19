@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>NFB html5 player - Demo</title>
+
+		<meta charset="utf-8" />
+
+		<!-- VideoJS + NFB Skin -->
+		<link rel="stylesheet" href="videojs/videojs.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" href="videojs/nfb/nfb.css" type="text/css" charset="utf-8" />
+		<script src="videojs/video.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- jQuery + NFB events -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+		<script src="events/jquery.video.js" type="text/javascript"></script>
+		<script src="events/jquery.video.stats.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>NFB Html5 player</h1>
+
+		<div class="video-js-box nfb-css">
+			<video id="video-js" class="video-js" width="515" height="288" controls="controls" preload="auto" poster="http://media1.nfb.ca/medias/nfb_tube/thumbs_large/2010/Lights-for-Gita_Grosse.jpg">
+				<source src="http://stream.nfb.ca/FLASH/flash4/collection4/streams/M415K/films/300_VI35458000_sen.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+
+				<embed class="vjs-flash-fallback" src="http://media1.nfb.ca/medias/flash/ONFflvplayer-gama.swf" width="516" height="337" allowfullscreen="true" allowscriptaccess="always" flashvars="mID=IDOBJ34813&amp;width=516&amp;height=337&amp;image=http://media1.nfb.ca/medias/nfb_tube/thumbs_large/2010/Lights-for-Gita_Grosse.jpg&amp;showWarningMessages=false&amp;lang=en&amp;getPlaylistOnEnd=true&amp;playlist_id=REL34813"></embed>
+			</video>
+
+			<p class="vjs-no-video"><strong>Download Video:</strong>
+				<a href="http://stream.nfb.ca/FLASH/flash4/collection4/streams/M415K/films/300_VI35458000_sen.mp4">MP4</a><br>
+				<a href="http://videojs.com">HTML5 Video Player</a> by VideoJS
+			</p>
+		</div>
+
+		<script type="text/javascript" charset="utf-8">
+			VideoJS.setup("video-js", {
+				controlsBelow: true,
+				controlsAtStart: true,
+				controlsHiding: false
+			});
+
+			$.video('#video-js').addChannel('nfbStats', {
+				film_slug: '34813',
+				api_key: 'f110c5d6-81c7-55ae-ac82-eeae3ab65d04'
+			});
+		</script>
+	</body>
+</html>

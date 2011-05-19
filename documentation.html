@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>NFB html5 player - Documentation</title>
+		<style type="text/css">
+			article {
+				font-family: arial;
+			}
+			dt {
+				font-weight: bold;
+			}
+			h1 {
+				font-size: 3em;
+			}
+			h2 {
+				font-size: 1.6em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<article>
+			<h1>Installing videojs player and nfb skin</h1>
+
+			<h2>Required files</h2>
+
+			<dl>
+				<dt>videojs/video.js</dt>
+				<dd>The video js core</dd>
+
+				<dt>videojs/videojs.css</dt>
+				<dd>The basic css</dd>
+
+				<dt>videojs/nfb/nfb.css</dt>
+				<dd>The css for the nfb skin</dd>
+			</dl>
+
+			<h2>Html code</h2>
+
+<pre>
+&lt;div class=&quot;video-js-box nfb-css&quot;&gt;
+	&lt;video id=&quot;video-js&quot; class=&quot;video-js&quot; width=&quot;515&quot; height=&quot;288&quot; controls=&quot;controls&quot; preload=&quot;auto&quot; poster=&quot;poster.jpg&quot;&gt;
+		&lt;source src=&quot;film.mp4&quot; type=&#x27;video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;&#x27; /&gt;
+
+		&lt;embed class=&quot;vjs-flash-fallback&quot; src=&quot;flash-player.swf&quot; width=&quot;516&quot; height=&quot;337&quot; allowfullscreen=&quot;true&quot; allowscriptaccess=&quot;always&quot;&gt;&lt;/embed&gt;
+	&lt;/video&gt;
+
+	&lt;p class=&quot;vjs-no-video&quot;&gt;&lt;strong&gt;Download Video:&lt;/strong&gt;
+		&lt;a href=&quot;film.mp4&quot;&gt;MP4&lt;/a&gt;&lt;br&gt;
+		&lt;a href=&quot;http://videojs.com&quot;&gt;HTML5 Video Player&lt;/a&gt; by VideoJS
+	&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+			
+			<h2>Javascript code to initializate</h2>
+
+<pre>
+VideoJS.setup("video-js", {
+	controlsBelow: true,
+	controlsAtStart: true,
+	controlsHiding: false
+});
+</pre>
+			
+			<h1>Capturing and sending user events</h1>
+
+			<h2>Required files</h2>
+
+			<dl>
+				<dt>jquery</dt>
+				<dd>javascript framework</dd>
+
+				<dt>jquery.video.js</dt>
+				<dd>A jquery plugin to manage video events</dd>
+
+				<dt>jquery.video.stats.js</dt>
+				<dd>A jquery.video plugin to manage nfb events</dd>
+			</dl>
+
+			<h2>Javascript code to initializate</h2>
+
+			<p>You have to use the $.video plugin and adds the nfbStats channel with the film slug and the api key:</p>
+
+<pre>
+$.video('#video-js').addChannel('nfbStats', {
+	film_slug: '34813',
+	api_key: 'f110c5d6-81c7-55ae-ac82-eeae3ab65d04'
+});
+</pre>
+		</article>
+	</body>
+</html>
